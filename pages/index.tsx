@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import fetch from 'isomorphic-unfetch';
-import cls from './index.module.scss';
+import './style.scss';
 
 function fetcher(url) {
   return fetch(url).then(r => r.json());
@@ -33,7 +33,7 @@ const PostLink = ({ post }) => (
   </li>
 );
 
-const Index = ({ shows }) => {
+const Index = ({ shows, userAgent }) => {
   const { query } = useRouter();
   const { data, error } = useSWR(
     `/api/randomQuote${query.author ? '?author=' + query.author : ''}`,
@@ -49,6 +49,7 @@ const Index = ({ shows }) => {
   return (
     <Layout>
       <h1>Batman TV Shows</h1>
+        {userAgent}
 
       <ul>
         {shows.map(post => (
@@ -57,7 +58,7 @@ const Index = ({ shows }) => {
       </ul>
 
       <main className="center">
-        <div className={cls.quote}>{quote}</div>
+        <div className={'quote'}>{quote}</div>
         {author && <span className="author">- {author}</span>}
       </main>
 
@@ -65,14 +66,16 @@ const Index = ({ shows }) => {
   )
 };
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function({ req }) {
   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+    const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
 
   return {
     shows: data.map(entry => entry.show),
+      userAgent
   };
 };
 

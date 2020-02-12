@@ -581,7 +581,7 @@ module.exports = _typeof;
 
 /***/ "./node_modules/@babel/runtime-corejs2/regenerator/index.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.js ***!
+  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.tsx ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -752,7 +752,7 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/
 
 /***/ "./node_modules/core-js/library/fn/symbol/index.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/symbol/index.js ***!
+  !*** ./node_modules/core-js/library/fn/symbol/index.tsx ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2811,7 +2811,7 @@ module.exports = {
 
 /***/ "./node_modules/core-js/library/modules/_to-absolute-index.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  !*** ./node_modules/core-js/library/modules/_to-absolute-index.tsx ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -5926,7 +5926,7 @@ exports.isSuspense = isSuspense;
 
 /***/ "./node_modules/next/node_modules/react-is/index.js":
 /*!**********************************************************!*\
-  !*** ./node_modules/next/node_modules/react-is/index.js ***!
+  !*** ./node_modules/next/node_modules/react-is/index.tsx ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6667,7 +6667,7 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ "./node_modules/querystring-es3/index.js":
 /*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
+  !*** ./node_modules/querystring-es3/index.tsx ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6683,7 +6683,7 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_5f137288facb1107b491 ***!
+  !*** delegated ./node_modules/react/index.tsx from dll-reference dll_5f137288facb1107b491 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

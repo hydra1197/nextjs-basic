@@ -902,7 +902,7 @@ module.exports = _typeof;
 
 /***/ "./node_modules/@babel/runtime-corejs2/regenerator/index.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.js ***!
+  !*** ./node_modules/@babel/runtime-corejs2/regenerator/index.tsx ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1125,7 +1125,7 @@ module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/cor
 
 /***/ "./node_modules/core-js/library/fn/symbol/index.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/core-js/library/fn/symbol/index.js ***!
+  !*** ./node_modules/core-js/library/fn/symbol/index.tsx ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3398,7 +3398,7 @@ module.exports = {
 
 /***/ "./node_modules/core-js/library/modules/_to-absolute-index.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  !*** ./node_modules/core-js/library/modules/_to-absolute-index.tsx ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4942,7 +4942,7 @@ module.exports = function bind(that) {
 
 /***/ "./node_modules/function-bind/index.js":
 /*!*********************************************!*\
-  !*** ./node_modules/function-bind/index.js ***!
+  !*** ./node_modules/function-bind/index.tsx ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4959,7 +4959,7 @@ module.exports = Function.prototype.bind || implementation;
 
 /***/ "./node_modules/has/src/index.js":
 /*!***************************************!*\
-  !*** ./node_modules/has/src/index.js ***!
+  !*** ./node_modules/has/src/index.tsx ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4976,7 +4976,7 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
 /***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
 /*!***************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
+  !*** ./node_modules/next/dist/build/polyfills/fetch/index.tsx ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -4999,7 +4999,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5f137288facb1107b491
 
 /***/ "./node_modules/next/dist/build/polyfills/object.assign/index.js":
 /*!***********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/object.assign/index.js ***!
+  !*** ./node_modules/next/dist/build/polyfills/object.assign/index.tsx ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7403,7 +7403,7 @@ exports.isSuspense = isSuspense;
 
 /***/ "./node_modules/next/node_modules/react-is/index.js":
 /*!**********************************************************!*\
-  !*** ./node_modules/next/node_modules/react-is/index.js ***!
+  !*** ./node_modules/next/node_modules/react-is/index.tsx ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7973,7 +7973,7 @@ module.exports = exports['default'];
 
 /***/ "./node_modules/prop-types-exact/build/index.js":
 /*!******************************************************!*\
-  !*** ./node_modules/prop-types-exact/build/index.js ***!
+  !*** ./node_modules/prop-types-exact/build/index.tsx ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8034,7 +8034,7 @@ function forbidExtraProps(propTypes) {
   }())));
 }
 module.exports = exports['default'];
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.tsx.map
 
 /***/ }),
 
@@ -8654,7 +8654,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 /***/ "./node_modules/prop-types/index.js":
 /*!******************************************!*\
-  !*** ./node_modules/prop-types/index.js ***!
+  !*** ./node_modules/prop-types/index.tsx ***!
   \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8884,7 +8884,7 @@ var objectKeys = Object.keys || function (obj) {
 
 /***/ "./node_modules/querystring-es3/index.js":
 /*!***********************************************!*\
-  !*** ./node_modules/querystring-es3/index.js ***!
+  !*** ./node_modules/querystring-es3/index.tsx ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9148,7 +9148,7 @@ exports.isSuspense = isSuspense;
 
 /***/ "./node_modules/react-is/index.js":
 /*!****************************************!*\
-  !*** ./node_modules/react-is/index.js ***!
+  !*** ./node_modules/react-is/index.tsx ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9165,7 +9165,7 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_5f137288facb1107b491 ***!
+  !*** delegated ./node_modules/react/index.tsx from dll-reference dll_5f137288facb1107b491 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

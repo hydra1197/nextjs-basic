@@ -1,15 +1,38 @@
 import Layout from '../components/MyLayout.js';
 import Link from 'next/link';
+import React from 'react';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import fetch from 'isomorphic-unfetch';
+import { NextPage } from 'next';
 import './style.scss';
 
-function fetcher(url) {
+function fetcher(url: string): Promise<any> {
   return fetch(url).then(r => r.json());
 }
 
-const PostLink = ({ post }) => (
+interface Post {
+  id: number;
+  name: string;
+  [property: string]: any;
+}
+
+interface PostLink {
+  key: number;
+  post: Post;
+}
+
+interface Shows {
+  score: number;
+  show: any;
+}
+
+interface Home {
+  shows: Post[];
+  userAgent: string;
+}
+
+const PostLink: React.FC<PostLink> = ({ post }) => (
   <li>
     <Link href="/p/[id]" as={`/p/${post.id}`}>
       <a>{post.name}</a>
@@ -33,7 +56,7 @@ const PostLink = ({ post }) => (
   </li>
 );
 
-const Index = ({ shows, userAgent }) => {
+const Home: NextPage<Home> = ({ shows, userAgent }) => {
   const { query } = useRouter();
   const { data, error } = useSWR(
     `/api/randomQuote${query.author ? '?author=' + query.author : ''}`,
@@ -49,7 +72,7 @@ const Index = ({ shows, userAgent }) => {
   return (
     <Layout>
       <h1>Batman TV Shows</h1>
-        {userAgent}
+      {userAgent}
 
       <ul>
         {shows.map(post => (
@@ -66,17 +89,17 @@ const Index = ({ shows, userAgent }) => {
   )
 };
 
-Index.getInitialProps = async function({ req }) {
+Home.getInitialProps = async function({ req }) {
   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-    const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
+  const userAgent = req ? req.headers['user-agent'] || '' : navigator.userAgent;
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
 
   return {
-    shows: data.map(entry => entry.show),
-      userAgent
+    shows: data.map((entry: Shows) => entry.show),
+    userAgent
   };
 };
 
-export default Index;
+export default Home;

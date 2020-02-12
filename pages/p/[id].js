@@ -10,6 +10,7 @@ const Post = ({ show, seo }) => {
       <Meta
         title={seo.metaTitle}
         description={seo.metaDescription}
+        image={seo.metaImage}
       />
       <h1>{show.name}</h1>
       <p>{show.summary.replace(/<[/]?[pb]>/g, '')}</p>
@@ -24,14 +25,14 @@ Post.getInitialProps = async function(context) {
   const show = await res.json();
 
   console.log(`Fetched show: ${show.name}`);
-  const { name, summary } = show;
-  console.log({ name, summary });
+  const { name, summary, image } = show;
 
   return {
     show,
     seo: {
       metaTitle: name,
-      metaDescription: summary
+      metaDescription: summary,
+      metaImage: image.medium,
     }
   };
 };

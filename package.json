@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start -p $PORT",
-    "export": "next build && next export"
+    "export": "next export"
   },
   "license": "ISC",
   "dependencies": {

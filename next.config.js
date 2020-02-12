@@ -1,12 +1,5 @@
+const fetch = require('isomorphic-unfetch');
 const withSass = require('@zeit/next-sass');
-// const sitemap = require('nextjs-sitemap-generator');
-//
-// // create sitemap.xml inside the out directory
-// sitemap({
-//   baseUrl: 'https://nextjs.hydra1197.now.sh',
-//   pagesDirectory: __dirname + "/pages",
-//   targetDirectory : 'static/sitemap/'
-// });
 
 // sass configure
 module.exports = withSass({
@@ -17,10 +10,21 @@ module.exports = withSass({
   },
 
   // yarn run export
-  exportPathMap: function () {
-    return {
+  exportTrailingSlash: true,
+  exportPathMap: async function() {
+    const paths = {
       '/': { page: '/' },
-    }
+      '/about': { page: '/about' }
+    };
+    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+    const data = await res.json();
+    const shows = data.map(entry => entry.show);
+
+    shows.forEach(show => {
+      paths[`/p/${show.id}`] = { page: '/p/[id]', query: { id: show.id } };
+    });
+
+    return paths;
   }
 });
 

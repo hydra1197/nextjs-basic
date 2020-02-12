@@ -3,8 +3,6 @@ import Layout from '../../components/MyLayout';
 import Meta from '../../components/Meta';
 
 const Post = ({ show, seo }) => {
-  console.log(seo);
-
   return (
     <Layout>
       <Meta

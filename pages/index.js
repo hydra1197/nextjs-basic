@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import fetch from 'isomorphic-unfetch';
+import cls from './index.module.scss';
 
 function fetcher(url) {
   return fetch(url).then(r => r.json());
@@ -30,7 +31,7 @@ const PostLink = ({ post }) => (
       }
     `}</style>
   </li>
-)
+);
 
 const Index = ({ shows }) => {
   const { query } = useRouter();
@@ -56,54 +57,13 @@ const Index = ({ shows }) => {
       </ul>
 
       <main className="center">
-        <div className="quote">{quote}</div>
+        <div className={cls.quote}>{quote}</div>
         {author && <span className="author">- {author}</span>}
       </main>
-      <style jsx>{`
-        h1,
-        a {
-          font-family: 'Arial';
-        }
 
-        ul {
-          padding: 0;
-        }
-
-        li {
-          list-style: none;
-          margin: 5px 0;
-        }
-
-        a {
-          text-decoration: none;
-          color: blue;
-        }
-
-        a:hover {
-          opacity: 0.6;
-        }
-        
-        main {
-          width: 90%;
-          max-width: 900px;
-          margin: 300px auto;
-          text-align: center;
-        }
-        .quote {
-          font-family: cursive;
-          color: #e243de;
-          font-size: 24px;
-          padding-bottom: 10px;
-        }
-        .author {
-          font-family: sans-serif;
-          color: #559834;
-          font-size: 20px;
-        }
-      `}</style>
     </Layout>
   )
-}
+};
 
 Index.getInitialProps = async function() {
   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
